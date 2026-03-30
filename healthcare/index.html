@@ -189,22 +189,22 @@
     <h2 id="coming-heading" class="h2-dk">What the Healthcare Division Will Offer</h2>
     <p class="body-dk">The same compliance discipline and veteran-owned accountability that defines PSG&rsquo;s IT division, applied to federal healthcare staffing for VA medical facilities nationwide.</p>
     <div class="coming-grid">
-      <div class="coming-card fade-up">
+      <div class="coming-card">
         <span class="coming-card-tag">Labor Categories</span>
         <h3>Clinical &amp; Allied Health</h3>
         <p>Registered Nurses, Licensed Practical Nurses, Medical Support Assistants, Certified Nursing Assistants, Physical Therapists, Occupational Therapists, and Allied Health professionals for VA medical centers and clinics.</p>
       </div>
-      <div class="coming-card fade-up">
+      <div class="coming-card">
         <span class="coming-card-tag">Compliance</span>
         <h3>SCA &amp; Healthcare-Specific Standards</h3>
         <p>Every healthcare placement will carry the same SCA Wage Determination compliance rigor as PSG&rsquo;s IT division. Healthcare-specific credentialing, licensure verification, and VA facility requirements will be built into the placement process.</p>
       </div>
-      <div class="coming-card fade-up">
+      <div class="coming-card">
         <span class="coming-card-tag">Employment Model</span>
         <h3>W-2, Full Benefits</h3>
         <p>All healthcare workers will be W-2 employees of PSG with full SCA Health &amp; Welfare fringe, federal holidays, paid vacation, and sick leave. The same model that protects IT workers will protect healthcare workers.</p>
       </div>
-      <div class="coming-card fade-up">
+      <div class="coming-card">
         <span class="coming-card-tag">Coverage</span>
         <h3>All 18 VA VISNs Nationwide</h3>
         <p>National recruiting and placement across all 18 VA Veterans Integrated Service Networks. Remote telehealth roles, hybrid positions, and on-site VA medical center placements all supported under the same PSG process.</p>
@@ -272,15 +272,15 @@
     <span class="tag" aria-hidden="true">PSG Roadmap</span>
     <h2 id="timeline-heading" class="h2-dk">Building Two Federal Staffing Practices</h2>
     <div class="timeline" role="list">
-      <div class="tl-item tl-active fade-up" role="listitem">
+      <div class="tl-item tl-active" role="listitem">
         <div><span class="tl-date">2026<span class="tl-pill now">Now</span></span><span class="tl-label">Current</span></div>
         <div><p class="tl-h">Federal IT Staffing Division  -  Active</p><p class="tl-p">PSG Federal IT Staffing is open for business. Placing cleared Help Desk, Desktop Support, Systems Administrator, and Network Engineer workers at VA facilities across all 18 VISNs. SDVOSB certified, SCA compliant, W-2 employer.</p></div>
       </div>
-      <div class="tl-item fade-up" role="listitem">
+      <div class="tl-item" role="listitem">
         <div><span class="tl-date">2026 to 2027<span class="tl-pill soon">In Progress</span></span><span class="tl-label">Development</span></div>
         <div><p class="tl-h">Healthcare Division Build-Out</p><p class="tl-p">Establishing healthcare-specific recruiting networks, credentialing processes, licensure verification systems, and prime contractor relationships for VA medical facility staffing. Building the healthcare labor category library and SCA compliance framework for clinical positions.</p></div>
       </div>
-      <div class="tl-item fade-up" role="listitem">
+      <div class="tl-item" role="listitem">
         <div><span class="tl-date">2027</span><span class="tl-label">Target Launch</span></div>
         <div><p class="tl-h">Federal Healthcare Staffing Division  -  Launch</p><p class="tl-p">PSG Healthcare opens for business. Registered Nurses, LPNs, Medical Support Assistants, and Allied Health professionals placed at VA medical centers nationwide. Same SDVOSB certification, same SCA compliance, same W-2 employment model.</p></div>
       </div>
@@ -347,31 +347,7 @@
 
 <script>
 // Fade-in on scroll
-(function(){
-  var els = document.querySelectorAll('.fade-up');
 
-  // Hard fallback — make everything visible after 900ms regardless
-  var fallback = setTimeout(function(){
-    els.forEach(function(el){ el.classList.add('visible'); });
-  }, 900);
-
-  if(!window.IntersectionObserver){
-    clearTimeout(fallback);
-    els.forEach(function(el){ el.classList.add('visible'); });
-    return;
-  }
-
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
-    });
-  },{threshold:0.05, rootMargin:'0px 0px -20px 0px'});
-
-  els.forEach(function(el){ io.observe(el); });
-})();
 
 // Notification form  -  mailto fallback (replace with Netlify Forms or Formspree in production)
 document.getElementById('notify-form').addEventListener('submit', function(e){

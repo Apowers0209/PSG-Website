@@ -331,32 +331,32 @@
     <h2 id="why-heading" class="h2-dk">What Sets PSG Apart</h2>
     <p class="body-dk">Across both divisions, every PSG placement is built on the same principles that large staffing firms cannot replicate.</p>
     <div class="why-grid-3">
-      <div class="why-card fade-up">
+      <div class="why-card">
         <span class="why-num">01</span>
         <h3 class="why-h">Owner Accountability</h3>
         <p class="why-p">PSG is owner-operated. One person recruits, screens, prices, and manages every placement. When something goes wrong mid-contract, there is one number to call  -  and it gets answered.</p>
       </div>
-      <div class="why-card fade-up">
+      <div class="why-card">
         <span class="why-num">02</span>
         <h3 class="why-h">SCA Compliance Discipline</h3>
         <p class="why-p">PSG pulls the applicable Wage Determination from SAM.gov before accepting any position across either division. WDs change. We never use stale rates. No payroll audit surprises for prime contractors.</p>
       </div>
-      <div class="why-card fade-up">
+      <div class="why-card">
         <span class="why-num">03</span>
         <h3 class="why-h">Legitimate SDVOSB Credit</h3>
         <p class="why-p">SBA VetCert certified. The subcontracting credit is audit-proof and counts toward prime contractor SDVOSB goals under FAR 52.219-27. The owner is a 100% P&amp;T disabled veteran with an honorable discharge.</p>
       </div>
-      <div class="why-card fade-up">
+      <div class="why-card">
         <span class="why-num">04</span>
         <h3 class="why-h">W-2 Employment Only</h3>
         <p class="why-p">Every worker PSG places is a W-2 employee  -  never a 1099 independent contractor. Full payroll tax compliance, workers&rsquo; comp coverage, SCA H&amp;W fringe, and federal holiday pay across every placement.</p>
       </div>
-      <div class="why-card fade-up">
+      <div class="why-card">
         <span class="why-num">05</span>
         <h3 class="why-h">National Reach</h3>
         <p class="why-p">PSG recruits nationally and supports remote, hybrid, and on-site placements across all 18 VA VISNs. A seat in Tampa, Denver, or Washington DC follows the same process as any other location.</p>
       </div>
-      <div class="why-card fade-up">
+      <div class="why-card">
         <span class="why-num">06</span>
         <h3 class="why-h">Technical Credibility</h3>
         <p class="why-p">The owner holds CompTIA Security+, Network+, A+, and Cisco CCNP and is an active Network Engineer II. Candidate screening is technical  -  not keyword matching  -  because the person doing the screening works the role.</p>
@@ -443,31 +443,7 @@
 </footer>
 
 <script>
-(function(){
-  var els = document.querySelectorAll('.fade-up');
 
-  // Hard fallback — make everything visible after 900ms regardless
-  var fallback = setTimeout(function(){
-    els.forEach(function(el){ el.classList.add('visible'); });
-  }, 900);
-
-  if(!window.IntersectionObserver){
-    clearTimeout(fallback);
-    els.forEach(function(el){ el.classList.add('visible'); });
-    return;
-  }
-
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
-    });
-  },{threshold:0.05, rootMargin:'0px 0px -20px 0px'});
-
-  els.forEach(function(el){ io.observe(el); });
-})();
 </script>
 
 <script>

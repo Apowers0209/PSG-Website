@@ -220,12 +220,7 @@ footer { background: #070F1E; padding: 3.5rem 0 2rem; }
 .ft-badge { font-size: 10px; color: var(--gold); letter-spacing: 0.1em; background: rgba(184,150,62,0.1); border: 1px solid rgba(184,150,62,0.2); padding: 4px 10px; border-radius: 2px; }
 
 /* ── ANIMATIONS ── */
-@media (prefers-reduced-motion: no-preference) {
-  .fade-up { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-}
-/* Fallback: ensure cards never stay invisible */
-.fade-up.loaded { opacity: 1; transform: translateY(0); }
+
 
 /* ── HAMBURGER BUTTON ── */
 .nav-hamburger {
