@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Powers Staffing Group | SDVOSB Federal Staffing | Nationwide</title>
+<meta name="description" content="Powers Staffing Group is a certified SDVOSB federal staffing company. Two divisions: Federal IT Staffing (active) and Federal Healthcare Staffing (launching 2027). Veteran-owned, SCA compliant, Las Vegas NV.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.powersstaffinggroup.com/">
+
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://www.powersstaffinggroup.com/">
+<meta property="og:title"       content="Powers Staffing Group | SDVOSB Federal Staffing | Nationwide">
+<meta property="og:description" content="Veteran-owned SDVOSB with two federal staffing divisions: IT and Healthcare. Nationwide VA coverage, SCA compliant, owner-operated. Las Vegas, NV.">
+<meta property="og:site_name"   content="Powers Staffing Group">
+<meta name="twitter:card"       content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization","LocalBusiness"],
+      "@id": "https://www.powersstaffinggroup.com/#organization",
+      "name": "Powers Staffing Group, LLC",
+      "alternateName": "PSG",
+      "url": "https://www.powersstaffinggroup.com",
+      "email": "andrew.powers@powersstaffinggroup.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Las Vegas",
+        "addressRegion": "NV",
+        "addressCountry": "US"
+      },
+      "foundingDate": "2026",
+      "legalName": "Powers Staffing Group, LLC",
+      "description": "Powers Staffing Group is a certified Service-Disabled Veteran-Owned Small Business (SDVOSB) providing federal staffing services nationwide. Divisions include Federal IT Staffing and Federal Healthcare Staffing for Department of Veterans Affairs contracts.",
+      "naics": ["541512","541519","561320"],
+      "hasCredential": [
+        {"@type":"EducationalOccupationalCredential","name":"SDVOSB Certification","credentialCategory":"SBA VetCert"},
+        {"@type":"EducationalOccupationalCredential","name":"CompTIA Security+"},
+        {"@type":"EducationalOccupationalCredential","name":"CompTIA Network+"},
+        {"@type":"EducationalOccupationalCredential","name":"CompTIA A+"},
+        {"@type":"EducationalOccupationalCredential","name":"Cisco CCNP"}
+      ],
+      "areaServed": {"@type":"Country","name":"United States"},
+      "sameAs": ["https://www.linkedin.com/company/powers-staffing-group","https://sam.gov"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.powersstaffinggroup.com/#website",
+      "url": "https://www.powersstaffinggroup.com",
+      "name": "Powers Staffing Group",
+      "publisher": {"@id":"https://www.powersstaffinggroup.com/#organization"}
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+<style>
+/* ── HOMEPAGE-SPECIFIC STYLES ── */
+
+/* Hero */
+#hero { background: var(--navy); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(184,150,62,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(184,150,62,0.06) 1px,transparent 1px); background-size: 64px 64px; pointer-events: none; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(184,150,62,0.12); border: 1px solid rgba(184,150,62,0.28); border-radius: 2px; padding: 5px 13px; margin-bottom: 1.75rem; }
+.hero-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.hero-badge-txt { font-size: 10px; font-weight: 500; color: var(--gold-light); letter-spacing: 0.14em; text-transform: uppercase; }
+.hero-sub { font-size: 1.02rem; font-weight: 300; color: rgba(255,255,255,0.62); max-width: 540px; line-height: 1.78; margin-bottom: 2.5rem; }
+
+/* Division doors */
+#divisions { background: var(--white); padding: 6rem 0 0; }
+.div-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3.5rem; }
+.div-intro-body { font-size: 0.95rem; color: var(--slate); line-height: 1.75; }
+.div-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.div-door { display: block; text-decoration: none; position: relative; overflow: hidden; padding: 3.5rem 3rem; transition: opacity 0.2s; }
+.div-door:hover { opacity: 0.93; }
+.div-door.active-div { background: var(--navy); }
+.div-door.soon-div  { background: var(--cream); border: 1px solid var(--border); }
+.div-door-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.17em; text-transform: uppercase; display: block; margin-bottom: 1.25rem; }
+.div-door.active-div .div-door-eyebrow { color: var(--gold); }
+.div-door.soon-div  .div-door-eyebrow { color: var(--slate-light); }
+.div-door-title { font-family: 'Playfair Display', serif; font-size: 2.25rem; font-weight: 500; line-height: 1.2; margin-bottom: 1rem; display: block; }
+.div-door.active-div .div-door-title { color: #fff; }
+.div-door.soon-div  .div-door-title { color: var(--navy); }
+.div-door-body { font-size: 1rem; line-height: 1.75; margin-bottom: 2rem; display: block; }
+.div-door.active-div .div-door-body { color: rgba(255,255,255,0.55); }
+.div-door.soon-div  .div-door-body { color: var(--slate); }
+.div-door-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+.div-door.active-div .div-door-cta { color: var(--gold-light); }
+.div-door.soon-div  .div-door-cta { color: var(--navy); }
+.div-door-arrow { transition: transform 0.2s; }
+.div-door:hover .div-door-arrow { transform: translateX(4px); }
+.soon-pill { position: absolute; top: 2rem; right: 2rem; background: rgba(11,31,58,0.07); border: 1px solid rgba(11,31,58,0.14); border-radius: 2px; padding: 3px 10px; font-size: 9px; font-weight: 500; color: var(--slate); letter-spacing: 0.1em; text-transform: uppercase; }
+.div-door-cats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 2rem; }
+.div-door-cat { font-size: 10px; font-weight: 500; padding: 3px 9px; border-radius: 2px; }
+.div-door.active-div .div-door-cat { background: rgba(184,150,62,0.14); color: var(--gold-light); border: 1px solid rgba(184,150,62,0.22); }
+.div-door.soon-div  .div-door-cat { background: rgba(11,31,58,0.06); color: var(--navy); border: 1px solid rgba(11,31,58,0.12); }
+
+/* About strip */
+#about { background: var(--gold-pale); border-top: 1px solid rgba(184,150,62,0.2); border-bottom: 1px solid rgba(184,150,62,0.2); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-body { font-size: 1.05rem; color: var(--slate); line-height: 1.8; margin-bottom: 1.75rem; }
+.about-creds { display: flex; flex-wrap: wrap; gap: 7px; }
+.cred-badge { background: rgba(11,31,58,0.07); border: 1px solid rgba(11,31,58,0.13); padding: 5px 13px; border-radius: 2px; font-size: 11px; font-weight: 500; color: var(--navy); letter-spacing: 0.04em; }
+.owner-card { background: var(--navy); border-radius: 2px; padding: 2.5rem; }
+.owner-card-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; margin-bottom: 1.5rem; }
+.owner-rows { display: flex; flex-direction: column; gap: 1.1rem; }
+.owner-row { display: flex; align-items: flex-start; gap: 12px; }
+.owner-icon { width: 30px; height: 30px; background: rgba(184,150,62,0.1); border: 1px solid rgba(184,150,62,0.22); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.owner-row-title { font-size: 12px; font-weight: 500; color: #fff; margin-bottom: 2px; }
+.owner-row-sub   { font-size: 11px; color: rgba(255,255,255,0.43); line-height: 1.45; }
+
+/* Why us (3-col) */
+#why { background: var(--white); }
+.why-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+.why-card { background: var(--cream); border: 1px solid var(--border); border-radius: 2px; padding: 2rem; }
+.why-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--gold); display: block; margin-bottom: 0.875rem; }
+.why-h { font-size: 1rem; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
+.why-p { font-size: 0.95rem; color: var(--slate); line-height: 1.65; }
+
+/* Contact */
+#contact { background: var(--navy); text-align: center; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 3.5rem; text-align: left; }
+.contact-card { padding: 2.5rem; }
+.contact-card.primes-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(184,150,62,0.2); }
+.contact-card.candidates-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+.contact-card-tag { font-size: 10px; font-weight: 500; color: var(--gold); letter-spacing: 0.17em; text-transform: uppercase; display: block; margin-bottom: 1rem; }
+.contact-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 500; color: #fff; margin-bottom: 0.875rem; }
+.contact-card p { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.7; margin-bottom: 1.75rem; }
+
+@media (max-width: 768px) {
+  .div-intro, .div-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .why-grid-3 { grid-template-columns: 1fr 1fr; }
+  .div-door { padding: 2.5rem 1.75rem; }
+}
+@media (max-width: 480px) {
+  .why-grid-3 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-w">
+        <a href="/" class="nav-brand" aria-label="Powers Staffing Group home">
+      <img src="/logo-main.png" alt="Powers Staffing Group logo" class="nav-logo-img">
+      <div class="nav-brand-text">
+        <span class="nav-brand-main">Powers Staffing Group</span>
+        <span class="nav-brand-sub">Federal Staffing Solutions</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/" class="active" aria-current="page">Home</a>
+      <a href="/federal-it/">Federal IT</a>
+      <a href="/healthcare/">Healthcare</a>
+      <a href="/#about">About</a>
+      <a href="/#contact" class="nav-cta">Contact Us</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Mobile navigation">
+  <a href="/" class="active">Home</a>
+  <a href="/federal-it/">Federal IT</a>
+  <a href="/healthcare/">Healthcare</a>
+  <a href="/#about">About</a>
+  <a href="/#contact" class="drawer-cta">Contact Us</a>
+</div>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="w" style="position:relative;z-index:1">
+    <div class="hero-badge">
+      <div class="hero-dot" aria-hidden="true"></div>
+      <span class="hero-badge-txt">SDVOSB Certified &middot; SBA VetCert &middot; Nationwide</span>
+    </div>
+    <h1 id="hero-heading" class="h1-hero">
+      Federal Staffing Built on<br><em>Veteran Standards.</em>
+    </h1>
+    <p class="hero-sub">Powers Staffing Group is a certified SDVOSB delivering federal staffing services nationwide. Two specialized divisions  -  Federal IT and Federal Healthcare  -  built on the same foundation: veteran ownership, SCA compliance, and owner accountability on every placement.</p>
+    <div class="btn-row">
+      <a href="/#divisions" class="btn-gold">Explore Our Divisions</a>
+      <a href="/#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+    <div class="stats-row" role="list" aria-label="Key facts">
+      <div class="stat" role="listitem"><span class="stat-n">18</span><span class="stat-l">VA VISNs Covered</span></div>
+      <div class="stat" role="listitem"><span class="stat-n">2</span><span class="stat-l">Staffing Divisions</span></div>
+      <div class="stat" role="listitem"><span class="stat-n">W-2</span><span class="stat-l">All Employees</span></div>
+      <div class="stat" role="listitem"><span class="stat-n">SDVOSB</span><span class="stat-l">Set-Aside Eligible</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT STRIP -->
+<div class="cert-strip" role="complementary" aria-label="Certifications">
+  <div class="cert-inner">
+    <span class="cert-lbl">Certifications</span>
+    <div class="cert-div" aria-hidden="true"></div>
+    <div class="cert-items">
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>SDVOSB</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>VOSB</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>CompTIA Security+</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>CompTIA Network+</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>CompTIA A+</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>Cisco CCNP</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>SBA VetCert</span>
+      <span class="cert-item"><span class="cert-chk" aria-hidden="true">&#10003;</span>SAM.gov Registered</span>
+    </div>
+  </div>
+</div>
+
+<!-- DIVISIONS -->
+<section id="divisions" aria-labelledby="divisions-heading">
+  <div class="w">
+    <div class="div-intro">
+      <div>
+        <span class="tag" aria-hidden="true">Our Divisions</span>
+        <h2 id="divisions-heading" class="h2-dk">Two Federal Staffing Practices. One Standard of Excellence.</h2>
+      </div>
+      <p class="div-intro-body">PSG operates two specialized divisions under one veteran-owned roof. Each division applies the same SCA compliance discipline, W-2 employment model, and owner-level accountability to its specific federal staffing market.</p>
+    </div>
+  </div>
+  <div class="div-grid">
+
+    <!-- IT DOOR -->
+    <a href="/federal-it/" class="div-door active-div" aria-label="Federal IT Staffing division  -  learn more">
+      <span class="div-door-eyebrow">Division 01 &middot; Active Now</span>
+      <span class="div-door-title">Federal IT Staffing</span>
+      <span class="div-door-body">Cleared federal IT workers placed at VA facilities nationwide. PSG handles recruiting, Public Trust clearance processing, SCA Wage Determination compliance, and W-2 payroll  -  so prime contractors receive a clean billing relationship.</span>
+      <div class="div-door-cats" aria-label="Labor categories">
+        <span class="div-door-cat">Help Desk Tier 1</span>
+        <span class="div-door-cat">Help Desk Tier 2</span>
+        <span class="div-door-cat">Desktop Support</span>
+        <span class="div-door-cat">Systems Administrator</span>
+        <span class="div-door-cat">Network Engineer I &amp; II</span>
+      </div>
+      <span class="div-door-cta">Explore Federal IT <span class="div-door-arrow">&#8594;</span></span>
+    </a>
+
+    <!-- HEALTHCARE DOOR -->
+    <a href="/healthcare/" class="div-door soon-div" aria-label="Federal Healthcare Staffing division  -  learn more">
+      <span class="soon-pill">Launching 2027</span>
+      <span class="div-door-eyebrow">Division 02 &middot; Coming Soon</span>
+      <span class="div-door-title">Federal Healthcare Staffing</span>
+      <span class="div-door-body">PSG's healthcare division will extend our federal compliance expertise into clinical and allied health placements for VA medical facilities nationwide. The same veteran-owned standards. The same SCA compliance rigor.</span>
+      <div class="div-door-cats" aria-label="Upcoming labor categories">
+        <span class="div-door-cat">Registered Nurses</span>
+        <span class="div-door-cat">Licensed Practical Nurses</span>
+        <span class="div-door-cat">Medical Support Assistants</span>
+        <span class="div-door-cat">Allied Health</span>
+      </div>
+      <span class="div-door-cta">Learn More <span class="div-door-arrow">&#8594;</span></span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="w">
+    <div class="about-grid">
+      <div>
+        <span class="tag" aria-hidden="true">About PSG</span>
+        <h2 id="about-heading" class="h2-dk">Veteran-Owned.<br>Compliance-First.<br>Owner-Operated.</h2>
+        <p class="about-body">Powers Staffing Group was founded by a 100% P&amp;T disabled veteran and active Network Engineer II. PSG exists because the VA needs federal staffing partners who understand the federal environment  -  and the SDVOSB ecosystem is underserved by quality operators. We fill that gap with the precision of a specialist and the responsiveness of a business owner who personally answers every call.</p>
+        <div class="about-creds" aria-label="Company credentials">
+          <span class="cred-badge">SDVOSB &middot; SBA VetCert</span>
+          <span class="cred-badge">Nevada LLC &middot; Founded 2026</span>
+          <span class="cred-badge">Security+ &middot; Network+ &middot; A+ &middot; CCNP</span>
+          <span class="cred-badge">Las Vegas, NV HQ</span>
+          <span class="cred-badge">NAICS 541512 &middot; 541519 &middot; 561320</span>
+        </div>
+      </div>
+      <div>
+        <div class="owner-card">
+          <h3 class="owner-card-title">Owner Credentials</h3>
+          <div class="owner-rows">
+            <div class="owner-row">
+              <div class="owner-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M7 1l1.8 4L13 5.5l-3 3 .8 4.5L7 11l-3.8 2 .8-4.5-3-3L5.2 5z"/></svg>
+              </div>
+              <div><p class="owner-row-title">100% P&amp;T Disabled Veteran</p><p class="owner-row-sub">Honorable discharge  -  SDVOSB qualification meets SBA VetCert standards</p></div>
+            </div>
+            <div class="owner-row">
+              <div class="owner-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="2" y="3" width="10" height="8" rx="1"/><path d="M4 6h6M4 9h4"/></svg>
+              </div>
+              <div><p class="owner-row-title">Active Network Engineer II</p><p class="owner-row-sub">Active NE2 in the private sector  -  real hands-on experience behind every hire</p></div>
+            </div>
+            <div class="owner-row">
+              <div class="owner-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="7" cy="7" r="5"/><path d="M7 4v3l2 2"/></svg>
+              </div>
+              <div><p class="owner-row-title">Screens Every Candidate Personally</p><p class="owner-row-sub">Technical evaluation by someone who holds the certifications and works in the field daily</p></div>
+            </div>
+            <div class="owner-row">
+              <div class="owner-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M2 7h10M7 2v10"/></svg>
+              </div>
+              <div><p class="owner-row-title">CompTIA Security+ &middot; Network+ &middot; A+ &middot; Cisco CCNP</p><p class="owner-row-sub">Hiring decisions backed by active certifications and hands-on technical expertise</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PSG -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="w">
+    <span class="tag" aria-hidden="true">Why PSG</span>
+    <h2 id="why-heading" class="h2-dk">What Sets PSG Apart</h2>
+    <p class="body-dk">Across both divisions, every PSG placement is built on the same principles that large staffing firms cannot replicate.</p>
+    <div class="why-grid-3">
+      <div class="why-card fade-up">
+        <span class="why-num">01</span>
+        <h3 class="why-h">Owner Accountability</h3>
+        <p class="why-p">PSG is owner-operated. One person recruits, screens, prices, and manages every placement. When something goes wrong mid-contract, there is one number to call  -  and it gets answered.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">02</span>
+        <h3 class="why-h">SCA Compliance Discipline</h3>
+        <p class="why-p">PSG pulls the applicable Wage Determination from SAM.gov before accepting any position across either division. WDs change. We never use stale rates. No payroll audit surprises for prime contractors.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">03</span>
+        <h3 class="why-h">Legitimate SDVOSB Credit</h3>
+        <p class="why-p">SBA VetCert certified. The subcontracting credit is audit-proof and counts toward prime contractor SDVOSB goals under FAR 52.219-27. The owner is a 100% P&amp;T disabled veteran with an honorable discharge.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">04</span>
+        <h3 class="why-h">W-2 Employment Only</h3>
+        <p class="why-p">Every worker PSG places is a W-2 employee  -  never a 1099 independent contractor. Full payroll tax compliance, workers&rsquo; comp coverage, SCA H&amp;W fringe, and federal holiday pay across every placement.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">05</span>
+        <h3 class="why-h">National Reach</h3>
+        <p class="why-p">PSG recruits nationally and supports remote, hybrid, and on-site placements across all 18 VA VISNs. A seat in Tampa, Denver, or Washington DC follows the same process as any other location.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">06</span>
+        <h3 class="why-h">Technical Credibility</h3>
+        <p class="why-p">The owner holds CompTIA Security+, Network+, A+, and Cisco CCNP and is an active Network Engineer II. Candidate screening is technical  -  not keyword matching  -  because the person doing the screening works the role.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="w">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="tag" aria-hidden="true">Get In Touch</span>
+      <h2 id="contact-heading" class="h2-lt">Let&rsquo;s Work Together</h2>
+      <p style="color:rgba(255,255,255,0.52);font-size:0.95rem;line-height:1.75;margin-bottom:0">Whether you&rsquo;re a prime contractor seeking an SDVOSB subcontractor or a federal professional looking for your next placement  -  reach out directly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card primes-card">
+        <span class="contact-card-tag">For Prime Contractors</span>
+        <h3>Partner With PSG</h3>
+        <p>Looking for a reliable SDVOSB subcontractor for your VA IT contract? PSG fills seats, handles compliance, and gives your small business program something real to report.</p>
+        <div class="btn-row">
+          <a href="mailto:andrew.powers@powersstaffinggroup.com?subject=Prime%20Contractor%20Inquiry" class="btn-gold">Email Andrew</a>
+          <a href="/federal-it/" class="btn-ghost">View IT Division</a>
+        </div>
+      </div>
+      <div class="contact-card candidates-card">
+        <span class="contact-card-tag">For Candidates</span>
+        <h3>Apply for a Position</h3>
+        <p>Federal IT professional looking for VA contract work? PSG offers W-2 employment, SCA benefits, clearance sponsorship, and a veteran-owned employer who speaks your language.</p>
+        <div class="btn-row">
+          <a href="mailto:andrew.powers@powersstaffinggroup.com?subject=Candidate%20Application" class="btn-gold">Apply Now</a>
+          <a href="/federal-it/#candidates" class="btn-ghost">See Open Roles</a>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2.5rem;font-size:12px;color:rgba(255,255,255,0.25)">
+      Powers Staffing Group, LLC &middot; Las Vegas, NV &middot; 702-625-3433 &middot;
+      <a href="mailto:andrew.powers@powersstaffinggroup.com" style="color:rgba(255,255,255,0.3);text-decoration:none">andrew.powers@powersstaffinggroup.com</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="w">
+    <div class="ft-top">
+      <div>
+        <img src="/logo-main.png" alt="Powers Staffing Group" class="footer-logo" width="80" height="80" style="margin-bottom:1rem;border-radius:2px">
+        <p class="ft-desc">SDVOSB-certified federal staffing with two specialized divisions, IT and Healthcare, for VA contracts nationwide. Veteran-owned. Compliance-first. Owner-operated.</p>
+      </div>
+      <div>
+        <p class="ft-col-h">Divisions</p>
+        <nav class="ft-links" aria-label="Division links">
+          <a href="/federal-it/">Federal IT Staffing</a>
+          <a href="/healthcare/">Healthcare Staffing</a>
+        </nav>
+      </div>
+      <div>
+        <p class="ft-col-h">Work With Us</p>
+        <nav class="ft-links" aria-label="Partner links">
+          <a href="/federal-it/#primes">For Prime Contractors</a>
+          <a href="/federal-it/#candidates">For Candidates</a>
+          <a href="mailto:andrew.powers@powersstaffinggroup.com?subject=Capability%20Statement%20Request">Capability Statement</a>
+        </nav>
+      </div>
+      <div>
+        <p class="ft-col-h">Company</p>
+        <nav class="ft-links" aria-label="Company links">
+          <a href="/#about">About PSG</a>
+          <a href="/#contact">Contact</a>
+          <a href="https://www.linkedin.com/company/powers-staffing-group" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+          <a href="https://sam.gov" rel="noopener noreferrer" target="_blank">SAM.gov</a>
+        </nav>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">&copy; 2026 Powers Staffing Group, LLC &middot; Las Vegas, Nevada &middot; NAICS 541512, 541519, 561320</p>
+      <span class="ft-badge">SDVOSB &middot; SBA VetCert</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!window.IntersectionObserver) return;
+  var els = document.querySelectorAll('.fade-up');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  },{threshold:0.1});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var drawer = document.getElementById('nav-drawer');
+  if(!btn||!drawer) return;
+  btn.addEventListener('click', function(){
+    var open = drawer.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && drawer.classList.contains('open')){
+      drawer.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    }
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      drawer.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
