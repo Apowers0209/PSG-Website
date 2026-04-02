@@ -188,13 +188,16 @@
 <!-- HERO -->
 <section id="hero" aria-labelledby="hero-heading">
   <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-accent-line hero-accent-line-1" aria-hidden="true"></div>
+  <div class="hero-accent-line hero-accent-line-2" aria-hidden="true"></div>
+  <div class="hero-scan" aria-hidden="true"></div>
   <div class="w" style="position:relative;z-index:1">
     <div class="hero-badge">
       <div class="hero-dot" aria-hidden="true"></div>
       <span class="hero-badge-txt">SDVOSB Certified &middot; SBA VetCert &middot; Nationwide</span>
     </div>
     <h1 id="hero-heading" class="h1-hero">
-      Federal Staffing Built on<br><em>Veteran Standards.</em>
+      Federal Staffing Built on<br><em id="typewriter-text"></em><span class="typewriter-cursor" id="tw-cursor"></span>
     </h1>
     <p class="hero-sub">Powers Staffing Group is a certified SDVOSB delivering federal staffing services nationwide. Two specialized divisions  -  Federal IT and Federal Healthcare  -  built on the same foundation: veteran ownership, SCA compliance, and owner accountability on every placement.</p>
     <div class="btn-row">
@@ -202,8 +205,8 @@
       <a href="/#contact" class="btn-ghost">Get in Touch</a>
     </div>
     <div class="stats-row" role="list" aria-label="Key facts">
-      <div class="stat" role="listitem"><span class="stat-n">18</span><span class="stat-l">VA VISNs Covered</span></div>
-      <div class="stat" role="listitem"><span class="stat-n">2</span><span class="stat-l">Staffing Divisions</span></div>
+      <div class="stat" role="listitem"><span class="stat-n" id="stat-visns">0</span><span class="stat-l">VA VISNs Covered</span></div>
+      <div class="stat" role="listitem"><span class="stat-n" id="stat-divs">0</span><span class="stat-l">Staffing Divisions</span></div>
       <div class="stat" role="listitem"><span class="stat-n">W-2</span><span class="stat-l">All Employees</span></div>
       <div class="stat" role="listitem"><span class="stat-n">SDVOSB</span><span class="stat-l">Set-Aside Eligible</span></div>
     </div>
@@ -477,5 +480,62 @@
 })();
 </script>
 
+
+<script>
+// Typewriter effect
+(function(){
+  var el = document.getElementById('typewriter-text');
+  var cursor = document.getElementById('tw-cursor');
+  if(!el) return;
+  var text = 'Veteran Standards.';
+  var i = 0;
+  var delay = 800;
+  function type(){
+    if(i <= text.length){
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, i === 1 ? delay : 65);
+    } else {
+      setTimeout(function(){
+        if(cursor) cursor.style.display = 'none';
+      }, 2000);
+    }
+  }
+  setTimeout(type, delay);
+})();
+
+// Stat counters
+(function(){
+  var stats = [
+    {id:'stat-visns', target:18, suffix:''},
+    {id:'stat-divs',  target:2,  suffix:''},
+  ];
+  var ran = false;
+  function runCounters(){
+    if(ran) return; ran = true;
+    stats.forEach(function(s){
+      var el = document.getElementById(s.id);
+      if(!el) return;
+      var start = 0;
+      var duration = 1200;
+      var step = duration / s.target;
+      var timer = setInterval(function(){
+        start++;
+        el.textContent = start + s.suffix;
+        if(start >= s.target) clearInterval(timer);
+      }, step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting) runCounters(); });
+    },{threshold:0.5});
+    var statsRow = document.querySelector('.stats-row');
+    if(statsRow) io.observe(statsRow);
+  } else {
+    runCounters();
+  }
+})();
+</script>
 </body>
 </html>

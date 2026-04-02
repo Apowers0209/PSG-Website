@@ -316,3 +316,120 @@ footer { background: #070F1E; padding: 3.5rem 0 2rem; }
 }
 
 /* ── SHARED NAV + FOOTER HTML snippets are inlined per page ── */
+
+/* ── HIGH-TECH VISUAL ENHANCEMENTS ── */
+
+/* Animated grid background */
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 64px 64px; }
+}
+.hero-grid-bg, .page-hero-grid, .about-hero-grid {
+  animation: grid-drift 20s linear infinite;
+}
+
+/* Glowing gold accent line */
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+.hero-accent-line {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent 100%);
+  animation: pulse-line 3s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-accent-line-1 { top: 35%; }
+.hero-accent-line-2 { top: 70%; opacity: 0.5; animation-delay: 1.5s; }
+
+/* Typewriter cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  background: var(--gold-light);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 0.8s step-end infinite;
+}
+
+/* Stat counter */
+.stat-n { transition: color 0.3s; }
+
+/* Card hover gold left border reveal */
+.card-white {
+  border-left: 3px solid transparent;
+  transition: border-color 0.25s ease, border-left-color 0.25s ease;
+}
+.card-white:hover {
+  border-left-color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* LC cards on IT page */
+.lc-card {
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.25s ease, border-color 0.25s ease;
+}
+.lc-card:hover {
+  border-left-color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Prime cards */
+.pc {
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.25s ease, border-color 0.25s ease;
+}
+.pc:hover {
+  border-left-color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Why cards on homepage */
+.why-card {
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.25s ease, border-color 0.25s ease;
+}
+.why-card:hover {
+  border-left-color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Topology node pulse for IT page hero */
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.15; r: 3; }
+  50%       { opacity: 0.45; r: 5; }
+}
+@keyframes node-pulse-2 {
+  0%, 100% { opacity: 0.1; r: 2; }
+  50%       { opacity: 0.35; r: 4; }
+}
+.topo-node { animation: node-pulse 4s ease-in-out infinite; }
+.topo-node-2 { animation: node-pulse-2 4s ease-in-out infinite; }
+.topo-node:nth-child(2n) { animation-delay: 1s; }
+.topo-node:nth-child(3n) { animation-delay: 2s; }
+.topo-node:nth-child(4n) { animation-delay: 3s; }
+
+/* Scan line effect on hero */
+@keyframes scan {
+  0%   { top: -10%; opacity: 0; }
+  10%  { opacity: 0.04; }
+  90%  { opacity: 0.04; }
+  100% { top: 110%; opacity: 0; }
+}
+.hero-scan {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  animation: scan 8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}

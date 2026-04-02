@@ -134,6 +134,40 @@
 .cta-strip-text h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.5rem; }
 .cta-strip-text p  { font-size: 0.9rem; color: var(--slate); }
 
+
+/* Terminal readout panel */
+.terminal-panel {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  width: 220px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(184,150,62,0.3);
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  padding: 1rem 1.1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  line-height: 1.8;
+  z-index: 2;
+}
+.terminal-panel .tp-title {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(184,150,62,0.2);
+  padding-bottom: 0.4rem;
+}
+.terminal-panel .tp-row { color: rgba(255,255,255,0.55); }
+.terminal-panel .tp-row span { color: #5FD87E; }
+.terminal-panel .tp-row em { color: var(--gold-light); font-style: normal; }
+@keyframes blink-dot {
+  0%,100% { opacity:1; } 50% { opacity:0; }
+}
+.tp-live { display: inline-block; width: 6px; height: 6px; background: #5FD87E; border-radius: 50%; animation: blink-dot 1.2s step-end infinite; margin-right: 5px; vertical-align: middle; }
+@media (max-width: 768px) { .terminal-panel { display: none; } }
 @media (max-width: 768px) {
   .lc-detail-grid, .primes-2col, .candidates-layout { grid-template-columns: 1fr; gap: 2rem; }
   .process-grid { grid-template-columns: 1fr 1fr; }
@@ -201,6 +235,47 @@
 <!-- PAGE HERO -->
 <header class="page-hero" aria-labelledby="it-heading">
   <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="hero-accent-line hero-accent-line-1" aria-hidden="true"></div>
+  <div class="hero-accent-line hero-accent-line-2" aria-hidden="true"></div>
+  <div class="hero-scan" aria-hidden="true"></div>
+  <svg class="topo-overlay" aria-hidden="true" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.18">
+    <line x1="120" y1="80"  x2="340" y2="160" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="340" y1="160" x2="580" y2="120" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="580" y1="120" x2="820" y2="200" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="820" y1="200" x2="1050" y2="140" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="340" y1="160" x2="480" y2="320" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="480" y1="320" x2="700" y2="380" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="700" y1="380" x2="900" y2="300" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="900" y1="300" x2="1050" y2="380" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="580" y1="120" x2="480" y2="320" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="820" y1="200" x2="700" y2="380" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="200" y1="300" x2="340" y2="160" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="200" y1="300" x2="480" y2="320" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="1050" y1="140" x2="1100" y2="300" stroke="#B8963E" stroke-width="0.5"/>
+    <line x1="1050" y1="380" x2="1100" y2="300" stroke="#B8963E" stroke-width="0.5"/>
+    <circle class="topo-node"   cx="120"  cy="80"  r="3" fill="#D4AF6A"/>
+    <circle class="topo-node-2" cx="340"  cy="160" r="4" fill="#D4AF6A"/>
+    <circle class="topo-node"   cx="580"  cy="120" r="3" fill="#D4AF6A"/>
+    <circle class="topo-node-2" cx="820"  cy="200" r="4" fill="#D4AF6A"/>
+    <circle class="topo-node"   cx="1050" cy="140" r="3" fill="#D4AF6A"/>
+    <circle class="topo-node-2" cx="480"  cy="320" r="4" fill="#D4AF6A"/>
+    <circle class="topo-node"   cx="700"  cy="380" r="3" fill="#D4AF6A"/>
+    <circle class="topo-node-2" cx="900"  cy="300" r="4" fill="#D4AF6A"/>
+    <circle class="topo-node"   cx="1050" cy="380" r="3" fill="#D4AF6A"/>
+    <circle class="topo-node-2" cx="200"  cy="300" r="3" fill="#D4AF6A"/>
+    <circle class="topo-node"   cx="1100" cy="300" r="3" fill="#D4AF6A"/>
+  </svg>
+  <div class="terminal-panel" aria-hidden="true">
+    <div class="tp-title"><span class="tp-live"></span>PSG System Status</div>
+    <div class="tp-row">SDVOSB &nbsp;<span>ACTIVE</span></div>
+    <div class="tp-row">SAM.gov &nbsp;<span>REGISTERED</span></div>
+    <div class="tp-row">SCA Compliance &nbsp;<span>ACTIVE</span></div>
+    <div class="tp-row">VISNs Covered &nbsp;<em>18 / 18</em></div>
+    <div class="tp-row">Labor Cats &nbsp;<em>7 Active</em></div>
+    <div class="tp-row">Clearance Svc &nbsp;<span>ACTIVE</span></div>
+    <div class="tp-row">W-2 Payroll &nbsp;<span>ACTIVE</span></div>
+    <div class="tp-row">H&amp;W Fringe &nbsp;<em>$5.55/hr</em></div>
+  </div>
   <div class="w" style="position:relative;z-index:1">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Powers Staffing Group</a>
@@ -211,15 +286,15 @@
       <div class="hero-dot" aria-hidden="true"></div>
       <span class="hero-badge-txt" style="font-size:10px;font-weight:500;color:var(--gold-light);letter-spacing:0.14em;text-transform:uppercase">Division 01 &middot; Active Now &middot; All 18 VA VISNs</span>
     </div>
-    <h1 id="it-heading" class="h1-hero">Federal IT Staffing<br>for VA Contracts <em>Nationwide.</em></h1>
+    <h1 id="it-heading" class="h1-hero">Federal IT Staffing<br>for VA Contracts <em id="it-typewriter"></em><span class="typewriter-cursor" id="it-cursor"></span></h1>
     <p style="font-size:1.2rem;font-weight:300;color:rgba(255,255,255,0.62);max-width:560px;line-height:1.78;margin-bottom:2.5rem">PSG recruits, screens, and employs cleared federal IT workers across all 18 VA VISNs. We handle recruiting, Public Trust clearance processing, SCA compliance, and W-2 payroll  -  so prime contractors get a clean billing relationship, not a management burden.</p>
     <div class="btn-row">
       <a href="#primes" class="btn-gold">I&rsquo;m a Prime Contractor</a>
       <a href="#candidates" class="btn-ghost">I&rsquo;m a Candidate</a>
     </div>
     <div class="stats-row" role="list" aria-label="Division key facts">
-      <div class="stat" role="listitem"><span class="stat-n">7</span><span class="stat-l">Labor Categories</span></div>
-      <div class="stat" role="listitem"><span class="stat-n">18</span><span class="stat-l">VA VISNs</span></div>
+      <div class="stat" role="listitem"><span class="stat-n" id="stat-lc">0</span><span class="stat-l">Labor Categories</span></div>
+      <div class="stat" role="listitem"><span class="stat-n" id="stat-it-visns">0</span><span class="stat-l">VA VISNs</span></div>
       <div class="stat" role="listitem"><span class="stat-n">W-2</span><span class="stat-l">All Employees</span></div>
       <div class="stat" role="listitem"><span class="stat-n">100%</span><span class="stat-l">SCA Compliant</span></div>
     </div>
@@ -696,5 +771,51 @@
 })();
 </script>
 
+
+<script>
+// IT page typewriter
+(function(){
+  var el = document.getElementById('it-typewriter');
+  var cursor = document.getElementById('it-cursor');
+  if(!el) return;
+  var text = 'Nationwide.';
+  var i = 0;
+  setTimeout(function tick(){
+    el.textContent = text.slice(0, i);
+    i++;
+    if(i <= text.length) setTimeout(tick, i === 1 ? 0 : 70);
+    else if(cursor) setTimeout(function(){ cursor.style.display='none'; }, 2000);
+  }, 900);
+})();
+
+// IT page stat counters
+(function(){
+  var stats = [
+    {id:'stat-lc',       target:7,  duration:800},
+    {id:'stat-it-visns', target:18, duration:1200},
+  ];
+  var ran = false;
+  function run(){
+    if(ran) return; ran = true;
+    stats.forEach(function(s){
+      var el = document.getElementById(s.id);
+      if(!el) return;
+      var n = 0;
+      var interval = s.duration / s.target;
+      var t = setInterval(function(){
+        n++; el.textContent = n;
+        if(n >= s.target) clearInterval(t);
+      }, interval);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(e){
+      e.forEach(function(x){ if(x.isIntersecting) run(); });
+    },{threshold:0.5});
+    var row = document.querySelector('.stats-row');
+    if(row) io.observe(row);
+  } else { run(); }
+})();
+</script>
 </body>
 </html>
