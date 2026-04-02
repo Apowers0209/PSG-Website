@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Powers Staffing Group</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+.error-page {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.error-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(184,150,62,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(184,150,62,0.06) 1px,transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+.error-code {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(6rem, 15vw, 10rem);
+  font-weight: 500;
+  color: rgba(184,150,62,0.15);
+  line-height: 1;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+.error-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.error-body {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 460px;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.error-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+.error-link {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  padding: 0 0.75rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.error-link:last-child { border-right: none; }
+.error-link:hover { color: var(--gold-light); }
+.error-logo {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+.error-logo img { width: 64px; height: 64px; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="error-page">
+  <div class="error-grid" aria-hidden="true"></div>
+  <div class="error-logo">
+    <a href="/"><img src="/logo-main.png" alt="Powers Staffing Group"></a>
+  </div>
+  <div class="error-code" aria-hidden="true">404</div>
+  <h1 class="error-title">This page doesn't exist.</h1>
+  <p class="error-body">But Andrew does. If you were looking for something specific and could not find it, reach out directly. PSG answers every inquiry personally.</p>
+  <div class="error-actions">
+    <a href="/" class="btn-gold">Back to Homepage</a>
+    <a href="tel:+17026253433" class="btn-ghost">Call 702-625-3433</a>
+  </div>
+  <div class="error-links">
+    <a href="/" class="error-link">Home</a>
+    <a href="/federal-it/" class="error-link">Federal IT</a>
+    <a href="/healthcare/" class="error-link">Healthcare</a>
+    <a href="/about/" class="error-link">About</a>
+    <a href="/resources/" class="error-link">Resources</a>
+    <a href="mailto:andrew.powers@powersstaffinggroup.com" class="error-link">Email Andrew</a>
+  </div>
+</div>
+</body>
+</html>
